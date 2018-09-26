@@ -1,5 +1,5 @@
 Arguments: 
-  /usr/local/bin/node /usr/local/bin/yarn add --dev dotenv@4.0.0
+  /usr/local/bin/node /usr/local/bin/yarn add babel-polyfill@6.26.0
 
 PATH: 
   /Library/Frameworks/Python.framework/Versions/2.7/bin:/Library/Frameworks/Python.framework/Versions/3.6/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/share/dotnet:/Library/Frameworks/Mono.framework/Versions/Current/Commands:/Applications/Xamarin Workbooks.app/Contents/SharedSupport/path-bin
@@ -14,7 +14,7 @@ Platform:
   darwin x64
 
 Trace: 
-  Error: EACCES: permission denied, unlink '/Users/goldenhsu/Library/Mobile Documents/com~apple~CloudDocs/Online classes/React/expensify-app/node_modules/.bin/babel'
+  Error: EACCES: permission denied, unlink '/Users/goldenhsu/Library/Mobile Documents/com~apple~CloudDocs/Online classes/React/expensify-app/node_modules/.bin/ansi-html'
 
 npm manifest: 
   {
@@ -42,6 +42,7 @@ npm manifest:
       "express": "4.15.4",
       "extract-text-webpack-plugin": "3.0.0",
       "firebase": "4.2.0",
+      "history": "4.7.2",
       "jest-serializer-enzyme": "^1.0.0",
       "moment": "2.18.1",
       "node-sass": "4.5.3",
@@ -73,6 +74,7 @@ npm manifest:
     "license": "MIT",
     "devDependencies": {
       "cross-env": "5.0.5",
+      "dotenv": "4.0.0",
       "jest": "20.0.4",
       "live-server": "^1.2.0",
       "webpack-cli": "^3.1.0",
@@ -2210,6 +2212,10 @@ Lockfile:
       dom-serializer "0"
       domelementtype "1"
   
+  dotenv@4.0.0:
+    version "4.0.0"
+    resolved "http://registry.npmjs.org/dotenv/-/dotenv-4.0.0.tgz#864ef1379aced55ce6f95debecdce179f7a0cd1d"
+  
   duplexer@~0.1.1:
     version "0.1.1"
     resolved "https://registry.yarnpkg.com/duplexer/-/duplexer-0.1.1.tgz#ace6ff808c1ce66b57d1ebf97977acb02334cfc1"
@@ -3215,7 +3221,7 @@ Lockfile:
       hoek "2.x.x"
       sntp "1.x.x"
   
-  history@^4.7.2:
+  history@4.7.2, history@^4.7.2:
     version "4.7.2"
     resolved "https://registry.yarnpkg.com/history/-/history-4.7.2.tgz#22b5c7f31633c5b8021c7f4a8a954ac139ee8d5b"
     dependencies:
