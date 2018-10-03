@@ -1,4 +1,4 @@
-import { Router, Route, Switch, Link, NavLink } from 'react-router-dom';
+import { HashRouter, Router, Route, Switch, Link, NavLink } from 'react-router-dom';
 import createHistory from 'history/createBrowserHistory';
 import React from 'react';
 import ExpenseDashboardPage from '../components/ExpenseDashboardPage';
@@ -14,7 +14,7 @@ import PublicRoute from './PublicRoute';
 export const history = createHistory({ basename: process.env.PUBLIC_URL });
 
 const AppRouter = () => (
-    <Router history={history}>
+    <HashRouter history={history}>
         <div>
             <Switch>
                 <PublicRoute path="/" component={LoginPage} exact={true}/>
@@ -24,7 +24,7 @@ const AppRouter = () => (
                 <Route component={NotFoundPage}/>
         </Switch>
         </div>   
-    </Router>
+    </HashRouter>
 );
 
 export default AppRouter;
