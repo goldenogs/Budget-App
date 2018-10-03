@@ -1,4 +1,4 @@
-import { HashRouter, Router, Route, Switch, Link, NavLink } from 'react-router-dom';
+import { HashRouter, Router, Route, HashRoute, Switch, Link, NavLink } from 'react-router-dom';
 import createHistory from 'history/createBrowserHistory';
 import React from 'react';
 import ExpenseDashboardPage from '../components/ExpenseDashboardPage';
@@ -21,7 +21,7 @@ const AppRouter = () => (
                 <PrivateRoute path="/dashboard" component={ExpenseDashboardPage}/>
                 <PrivateRoute path="/create" component={AddExpensePage}/>
                 <PrivateRoute path="/edit/:id" component={EditExpensePage}/>
-                <Route component={NotFoundPage}/>
+                <HashRoute component={NotFoundPage}/>
             </Switch>
         </div>   
     </HashRouter>
