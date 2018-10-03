@@ -11,7 +11,7 @@ import LoginPage from '../components/LoginPage';
 import PrivateRoute from './PrivateRoute';
 import PublicRoute from './PublicRoute';
 
-export const history = createHistory({ basename: process.env.PUBLIC_URL + '/' });
+export const history = createHistory({ basename: process.env.PUBLIC_URL + '/', });
 
 const AppRouter = () => (
     <HashRouter history={history}>
