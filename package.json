@@ -10,7 +10,7 @@
     "build": "build",
     "heroku-postbuild": "yarn run build:prod",
     "predeploy": "yarn run build:prod",
-    "deploy": "gh-pages -d docs"
+    "deploy": "gh-pages -d public"
   },
   "dependencies": {
     "babel-cli": "6.24.1",
