@@ -1,4 +1,5 @@
 {
+  "homepage": "http://goldenhsu.me/Budget-App/",
   "scripts": {
     "serve": "live-server public/",
     "build:dev": "webpack",
@@ -6,9 +7,10 @@
     "dev-server": "webpack-dev-server",
     "test": "cross-env NODE_ENV=test jest --config=jest.config.json",
     "start": "node server/server.js",
+    "build": "build",
     "heroku-postbuild": "yarn run build:prod",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build:prod"
+    "predeploy": "yarn run build:prod",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "babel-cli": "6.24.1",
@@ -27,6 +29,7 @@
     "extract-text-webpack-plugin": "3.0.0",
     "firebase": "4.2.0",
     "gh-pages": "^2.0.0",
+    "gh-pages-deploy": "^0.5.0",
     "history": "4.7.2",
     "jest-serializer-enzyme": "^1.0.0",
     "moment": "2.18.1",
