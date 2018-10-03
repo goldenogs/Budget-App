@@ -11,7 +11,7 @@ import LoginPage from '../components/LoginPage';
 import PrivateRoute from './PrivateRoute';
 import PublicRoute from './PublicRoute';
 
-export const history = createHistory({ basename: process.env.PUBLIC_URL + '/', });
+export const history = createHistory({ basename: process.env.PUBLIC_URL, });
 
 const AppRouter = () => (
     <HashRouter history={history}>
@@ -21,7 +21,7 @@ const AppRouter = () => (
                 <PrivateRoute path="/dashboard" component={ExpenseDashboardPage}/>
                 <PrivateRoute path="/create" component={AddExpensePage}/>
                 <PrivateRoute path="/edit/:id" component={EditExpensePage}/>
-                <HashRoute component={NotFoundPage}/>
+                <HashRoute component={LoginPage}/>
             </Switch>
         </div>   
     </HashRouter>
