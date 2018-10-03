@@ -15,7 +15,7 @@ module.exports = (env) => {
     return {
         entry: ['babel-polyfill', './src/app.js'],
         output: {
-            path: path.join(__dirname, 'public', 'dist'),
+            path: path.join(__dirname, 'docs', 'dist'),
             filename: 'bundle.js'
         },
         module: {
@@ -56,7 +56,7 @@ module.exports = (env) => {
         ],
         devtool: isProduction ? 'source-map': 'inline-source-map',
         devServer: {
-            contentBase: path.join(__dirname, 'public'),
+            contentBase: path.join(__dirname, 'docs'),
             historyApiFallback: true,
             publicPath: '/dist/'
         }
